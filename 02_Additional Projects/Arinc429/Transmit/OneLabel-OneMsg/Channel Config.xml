@@ -1,0 +1,13 @@
+<bti:channel429 xmlns:bti="http://www.ballardtech.com/DatabusSchemas/" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" ID="1" name="MyChannel1">
+	<bti:txChannel speedKHz="100" scheduleMode="Rate" highVolt="10" lowVolt="-10" nullVolt="0" cmBiasVolt="0" highRiseTime="1.8" lowRiseTime="1.8">
+		<bti:messages>
+			<bti:message ID="1" name="MyLabel1" messageBufferIDRef="11" minRate="250" maxRate="500" labelDecimal="134">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="11" name="">
+						<bti:rawData>CAEBCDAB</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+		</bti:messages>
+	</bti:txChannel>
+</bti:channel429>
