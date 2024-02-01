@@ -1,28 +1,81 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<channel429 ID="1" name="MyChannel1" xmlns="http://www.ballardtech.com/DatabusSchemas/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ballardtech.com/DatabusSchemas/ ./BTI.xsd">
-	<txChannel scheduleMode="Rate">
-		<messages>
-			<message ID="1" name="MyLabel1" labelDecimal="134" minRate="250" maxRate="500" messageBufferIDRef="11">
-				<messageBuffers>
-					<messageBuffer ID="11">
-						<rawData>AAAAAAAA</rawData>
-					</messageBuffer>
-				</messageBuffers>
-			</message>
-			<message ID="2" name="MyLabel2" labelDecimal="136" minRate="250" maxRate="500" messageBufferIDRef="22">
-				<messageBuffers>
-					<messageBuffer ID="22">
-						<rawData>BBBBBBBB</rawData>
-					</messageBuffer>
-				</messageBuffers>
-			</message>
-			<message ID="3" name="MyLabel3" labelDecimal="137" minRate="100" maxRate="250" messageBufferIDRef="33">
-				<messageBuffers>
-					<messageBuffer ID="33">
-						<rawData>CCCCCCCC</rawData>
-					</messageBuffer>
-				</messageBuffers>
-			</message>
-		</messages>
-	</txChannel>	
-</channel429>
+<bti:channel429 xmlns:bti="http://www.ballardtech.com/DatabusSchemas/" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" ID="1" name="MyChannel1">
+	<bti:txChannel speedKHz="100" scheduleMode="Rate" highVolt="10" lowVolt="-10" nullVolt="0" cmBiasVolt="0" highRiseTime="1.8" lowRiseTime="1.8">
+		<bti:messages>
+			<bti:message ID="1" name="Pitch Angle" messageBufferIDRef="11" minRate="250" maxRate="500" labelDecimal="212" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="11" name="messageBuffer ID41">
+						<bti:rawData>AAAAAAAA</bti:rawData>
+						<bti:rawData>BBBBBBBB</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="2" name="Roll Angle" messageBufferIDRef="22" minRate="250" maxRate="500" labelDecimal="213" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="22" name="">
+						<bti:rawData>CCCCCCCC</bti:rawData>
+						<bti:rawData>DDDDDDDD</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="3" name="Body Pitch Rate" messageBufferIDRef="33" maxRate="250" labelDecimal="214" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="33" name="">
+						<bti:rawData>CCCCCCCC</bti:rawData>
+						<bti:rawData>EEEEEEEE</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="34" name="Body Roll Rate" messageBufferIDRef="41" labelDecimal="215">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="41" name="messageBuffer ID41">
+						<bti:rawData>AAAAAAAA</bti:rawData>
+						<bti:rawData>BBBBBBBB</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="35" name="Body Yaw / Turn Rate" labelDecimal="216" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="42" name="messageBuffer ID42">
+						<bti:rawData>CCCCCCCC</bti:rawData>
+						<bti:rawData>DDDDDDDD</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="36" name="Pitch Angle" labelDecimal="212" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="43" name="messageBuffer ID43">
+						<bti:rawData>EEEEEEEE</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="37" name="Roll Angle" labelDecimal="213" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="44" name="messageBuffer ID44">
+						<bti:rawData>FFFFFFFF</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="38" name="Body Pitch Rate" labelDecimal="214" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="45" name="messageBuffer ID45">
+						<bti:rawData>AAAAAAAA</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="39" name="Body Roll Rate" labelDecimal="215" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="46" name="messageBuffer ID46">
+						<bti:rawData>BBBBBBBB</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="40" name="Body Yaw Rate" labelDecimal="216" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="47" name="messageBuffer ID47">
+						<bti:rawData>CCCCCCCC</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+		</bti:messages>
+	</bti:txChannel>
+</bti:channel429>
