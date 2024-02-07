@@ -12,8 +12,8 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Core Config.xml" Type="Document" URL="../Core Config.xml"/>
-		<Item Name="EGI1 Channel Config.xml" Type="Document" URL="../EGI1 Channel Config.xml"/>
-		<Item Name="EGI2 Channel Config.xml" Type="Document" URL="../EGI2 Channel Config.xml"/>
+		<Item Name="Rx Channel Config.xml" Type="Document" URL="../Rx Channel Config.xml"/>
+		<Item Name="Tx Channel Config.xml" Type="Document" URL="../Tx Channel Config.xml"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -56,34 +56,6 @@
 		<Property Name="target.server.vi.access" Type="Str">+*</Property>
 		<Property Name="target.server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.vi.propertiesEnabled" Type="Bool">true</Property>
-		<Property Name="target.WebServer.Config" Type="Str">Listen 8000
-
-NI.ServerName default
-DocumentRoot "$LVSERVER_DOCROOT"
-TypesConfig "$LVSERVER_CONFIGROOT/mime.types"
-DirectoryIndex index.htm
-WorkerLimit 10
-InactivityTimeout 60
-
-LoadModulePath "$LVSERVER_MODULEPATHS"
-LoadModule LVAuth lvauthmodule
-LoadModule LVRFP lvrfpmodule
-
-#
-# Pipeline Definition
-#
-
-SetConnector netConnector
-
-AddHandler LVAuth
-AddHandler LVRFP
-
-AddHandler fileHandler ""
-
-AddOutputFilter chunkFilter
-
-
-</Property>
 		<Property Name="target.WebServer.Enabled" Type="Bool">false</Property>
 		<Property Name="target.WebServer.LogEnabled" Type="Bool">false</Property>
 		<Property Name="target.WebServer.LogPath" Type="Path">/c/ni-rt/system/www/www.log</Property>
@@ -94,11 +66,7 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
-		<Item Name="Egi1_Pitch_Roll_Angel_Set_Get.vi" Type="VI" URL="../Egi1_Pitch_Roll_Angel_Set_Get.vi"/>
-		<Item Name="Egi1_Pitch_Roll_Yaw_Rate_Set_Get.vi" Type="VI" URL="../Egi1_Pitch_Roll_Yaw_Rate_Set_Get.vi"/>
-		<Item Name="Egi2_Pitch_Roll_Angel_Set_Get.vi" Type="VI" URL="../Egi2_Pitch_Roll_Angel_Set_Get.vi"/>
-		<Item Name="Transmit Messages with Rate-based Schedule.vi" Type="VI" URL="../Transmit Messages with Rate-based Schedule.vi"/>
-		<Item Name="Transmit Messages with Rate-based Schedule2.vi" Type="VI" URL="../Transmit Messages with Rate-based Schedule2.vi"/>
+		<Item Name="MultiCha-TransmitReceive.vi" Type="VI" URL="../MultiCha-TransmitReceive.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="BTI429LV.lvlib" Type="Library" URL="/&lt;instrlib&gt;/BTI429Lib/BTI429LV.lvlib"/>
@@ -113,8 +81,6 @@ AddOutputFilter chunkFilter
 			<Item Name="BTICardLV.dll" Type="Document" URL="BTICardLV.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="ChAndCoreXMLPaths.vi" Type="VI" URL="../ChAndCoreXMLPaths.vi"/>
-			<Item Name="SensorsGetScheduledMessages.vi" Type="VI" URL="../SensorsGetScheduledMessages.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>

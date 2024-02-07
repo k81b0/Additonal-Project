@@ -1,0 +1,9 @@
+<bti:channel429 xmlns:bti="http://www.ballardtech.com/DatabusSchemas/" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" ID="1" name="MyChannel1" selfTestBus="true">
+	<bti:rxChannel speedKHz="100" defaultBufferMonitor="true">
+		<bti:labels>
+			<bti:label ID="1" name="MyLabel1" labelDecimal="134"/>
+			<bti:label ID="2" name="MyLabel2" labelDecimal="156"/>
+			<bti:label ID="3" name="MyLabel3" labelDecimal="183"/>
+		</bti:labels>
+	</bti:rxChannel>
+</bti:channel429>

@@ -1,0 +1,41 @@
+<bti:channel429 xmlns:bti="http://www.ballardtech.com/DatabusSchemas/" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" ID="1" name="MyChannel1">
+	<bti:txChannel speedKHz="100" scheduleMode="Rate" highVolt="10" lowVolt="-10" nullVolt="0" cmBiasVolt="0" highRiseTime="1.8" lowRiseTime="1.8">
+		<bti:messages>
+			<bti:message ID="1" name="Pitch Angle" messageBufferIDRef="11" maxRate="250" labelDecimal="212" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="11" name="messageBuffer ID41">
+						<bti:rawData>6AAAAAD4</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="2" name="Roll Angle" messageBufferIDRef="22" maxRate="250" labelDecimal="213" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="22" name="messageBuffer ID41">
+						<bti:rawData>6CCCCCD5</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="3" name="Body Pitch Rate" messageBufferIDRef="33" maxRate="250" labelDecimal="214" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="33" name="messageBuffer ID41">
+						<bti:rawData>6CCCCCD6</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="34" name="Body Roll Rate" messageBufferIDRef="41" maxRate="250" labelDecimal="215" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="41" name="messageBuffer ID41">
+						<bti:rawData>6AAAAAD7</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+			<bti:message ID="35" name="Body Yaw / Turn Rate" messageBufferIDRef="42" maxRate="250" labelDecimal="216" SDI="00">
+				<bti:messageBuffers>
+					<bti:messageBuffer ID="42" name="messageBuffer ID42">
+						<bti:rawData>6A5BC8D8</bti:rawData>
+					</bti:messageBuffer>
+				</bti:messageBuffers>
+			</bti:message>
+		</bti:messages>
+	</bti:txChannel>
+</bti:channel429>
